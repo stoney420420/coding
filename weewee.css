@@ -1,6 +1,10 @@
 #first {
     background-color: darksalmon;
+    margin-left: 50%;
 }
 body {
     background-color: greenyellow;
+}
+.important {
+    font-weight: bold;
 }
