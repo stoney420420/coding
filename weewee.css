@@ -1,9 +1,9 @@
 #first {
-    background-color: darksalmon;
+    background-color: rgb(233, 122, 196);
     margin-left: 50%;
 }
 body {
-    background-color: greenyellow;
+    background-color: rgb(176, 223, 255);
 }
 .important {
     font-weight: bold;

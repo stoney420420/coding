@@ -1,0 +1,52 @@
+testing FizzBuzz
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .count {
+      font-size: 12px;
+      padding-top: 30px;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button class="num-count">Click Me!</button>
+  <div class="count"></div>
+
+  <script>
+    const numCount = document.querySelector('.count');
+    const button = document.querySelector('.num-count');
+
+
+    const numArr = []
+    // first initialize the array with the values
+    for (let i = 1; i <= 100; i++) {
+      numArr[i] = i;
+    }
+
+    for (let i = 1; i <= 100; i++) {
+      if (numArr[i] % 3 === 0 && numArr[i] % 5 === 0) {
+
+        numArr[i] = "FizzBuzz"
+      } else if (numArr[i] % 5 === 0) {
+        numArr[i] = "Buzz"
+      } else if (numArr[i] % 3 === 0) {
+        numArr[i] = "Fizz"
+      };
+
+    };
+    button.addEventListener('click', () => {
+      numCount.textContent = numArr;
+    });
+  </script>
+
+</body>
+
+</html>
