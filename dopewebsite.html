@@ -6,8 +6,8 @@
 </head>
 
 <body>
-    I love compooters :D:D:D
-    <div id="first" class="important">something</div>
+    <h1><center>I love compooters :D:D:D</center></h1>
+    <div id="first" class="important"><center>~~~ something ~~~</center></div>
 
     Part of a line <span class="important">important text</span> the rest of the line
 
@@ -30,14 +30,65 @@
 
 
     <div id="output">
-        Output area!
+        <h2><center><i>Output area!</i></center></h2>
+        <h3>Numbers 1-100</h3>
+        <script>
+            document.write("<table class='table'>")
+            for(a = 1; a < 100; a = a + 10)
+            {
+                document.write("<tr>")
+                for(b = a; b < a + 10; b++)
+                {
+                    document.write("<td>"+b+"</td>");
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+         </script>
     </div>
+    
+    
+      <center><button class="num-count">~~~Click dis!~~~</button></center>
+      <div class="count"></div>
+    
+      <script>
+        const numCount = document.querySelector('.count');
+        const button = document.querySelector('.num-count');
+    
+    
+        const numArr = []
+        
+        for (let i = 1; i <= 100; i++) {
+          numArr[i] = i;
+        }
+    
+        for (let i = 1; i <= 100; i++) {
+          if (numArr[i] % 3 === 0 && numArr[i] % 5 === 0) {
+    
+            numArr[i] = "FizzBuzz"
+          } else if (numArr[i] % 5 === 0) {
+            numArr[i] = "Buzz"
+          } else if (numArr[i] % 3 === 0) {
+            numArr[i] = "Fizz"
+          };
+    
+        };
+        button.addEventListener('click', () => {
+          numCount.textContent = numArr;
+        });
+      </script>
+    
+    
+    
+    
+
 </body>
 
 <script>
     var x = document.getElementById("first");
     x.style.color = "white";
-
+  
 </script>
+
 
 </html>
